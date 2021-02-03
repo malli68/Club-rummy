@@ -1,6 +1,7 @@
 import React from 'react'
 import reactDom from 'react-dom'
 import '../login/login.css'
+import { useHistory } from 'react-router-dom';
 /* import config from '../../config'
 import { connect } from 'react-redux';
 import {removeSession} from '../helpers/globalHelpers/GlobalHelperFunctions'
@@ -60,8 +61,9 @@ class Login extends React.Component {
     }*/
   }
  
-
+ 
     render(){
+    
      /*    const { loading, isUserLogIn, error, email } = this.props; */
     return (
         <div>
@@ -101,7 +103,7 @@ class Login extends React.Component {
                                     </div>
 
                                     <div className="mt-3">
-                                        <button className="btn btn-primary btn-block waves-effect waves-light" type="submit" >Log In</button>
+                                        <button className="btn btn-primary btn-block waves-effect waves-light" type="submit" onClick={this.handleClick} >Log In</button>
                                     </div>
 
                                     <div className="mt-4 text-center">
