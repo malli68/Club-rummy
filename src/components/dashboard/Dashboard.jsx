@@ -363,7 +363,7 @@ function Dashboard() {
                 <li>
                     <a href="index.html" class=" waves-effect">
                         <i class="mdi mdi-calendar-text"></i>
-                    <Link to={URL.NAV_HOME}> <span>Dashboard</span></Link>   
+                   <span><Link to={URL.NAV_HOME}>Dashboard</Link></span>
                     </a>
                 </li>
 

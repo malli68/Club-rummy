@@ -13,8 +13,8 @@ export default class AppRouter extends React.Component {
                 <Router>
                     <Switch>
                     <Route exact path='/' component={Login}></Route>
-                    <ProtectedRoute exact path='/dashboard' component={Dashboard}></ProtectedRoute>
-                    <ProtectedRoute exact path='/users' component={ClubUsers}></ProtectedRoute>
+                    <Route exact path='/dashboard' component={Dashboard}></Route>
+                    <Route exact path='/users' component={ClubUsers}></Route>
                     <Route path="/*"> <Redirect to="/" /></Route>
                     </Switch>
                 </Router>
