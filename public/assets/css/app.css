@@ -348,7 +348,7 @@ body[data-layout="horizontal"] .footer {
     font-size: 1rem; }
   #sidebar-menu ul li a {
     display: inline-block;
-    padding: .625rem 0.5rem;
+    padding: .625rem 1.0rem;
     color: #707d8a;
     position: relative;
     font-size: 14.4px;

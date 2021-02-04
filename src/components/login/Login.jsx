@@ -2,7 +2,7 @@ import React from 'react'
 import reactDom from 'react-dom'
 import '../login/login.css'
 import { useHistory } from 'react-router-dom';
-/* import config from '../../config'
+import config from '../../config'
 import { connect } from 'react-redux';
 import {removeSession} from '../helpers/globalHelpers/GlobalHelperFunctions'
 import { setCacheObject, getCacheObject } from '../helpers/globalHelpers/GlobalHelperFunctions';
@@ -10,12 +10,13 @@ import { login, errorlogin, setdata, resetlogin } from '../redux/actions/LoginAc
 import {validateEmail} from '../helpers/globalHelpers/Utils'
 const LOGIN_USER_NAME = config.LOGIN_USER_NAME;
 const SESSION_KEY_NAME = config.SESSION_KEY_NAME;
- */
+
 class Login extends React.Component {
      constructor(props) {
         super(props)
+        // this.handleChange = this.handleChange.bind(this);
        /*  this.props.resetlogin(); */
-       /* this.state = {
+       this.state = {
           login: false,
           password: "",
           error: false
@@ -25,7 +26,7 @@ class Login extends React.Component {
         removeSession();
         let isLoggedIn = localStorage.getItem("auth");
         this.setState({ login: isLoggedIn });
-        // this.refs["username"].focus();
+        // this.refs["email"].focus();
       }
 
       
@@ -33,10 +34,10 @@ class Login extends React.Component {
   async login() {
     const { email } = this.props;
     if (email == "" || this.state.password == "") {
-      this.props.onErrorLogin('Please Enter Email and Password');
+      this.props.onErrorLogin('Please Enter email and Password');
       return false;
     } else if (!validateEmail(email)) {
-      this.props.onErrorLogin('Enter valid Email.');
+      this.props.onErrorLogin('Enter valid email.');
       return false;
     }
     let dataObject = {
@@ -58,13 +59,14 @@ class Login extends React.Component {
       this.props.setdata(data)
     } else if (e.target.name == "password") {
       this.setState({ [e.target.name]: e.target.value })
-    }*/
+    }
   }
- 
+
  
     render(){
     
-     /*    const { loading, isUserLogIn, error, email } = this.props; */
+        const { loading, isUserLogIn, error, email } = this.props;
+        const {password} = this.state.password
     return (
         <div>
                {/*  <!-- login page --> */}
@@ -88,22 +90,21 @@ class Login extends React.Component {
                                 <form className="form-horizontal" action="index.html">
 
                                     <div className="form-group">
-                                        <label for="username">Username</label>
-                                        <input type="text" className="form-control"  id="username" placeholder="Enter username" onChange={this.handleChange} />
+                                        <label for="email">email</label>
+                                        <input type="text" className="form-control"  value={email} type="text" id="email" placeholder="Enter email" onChange={this.handleChange} />
                                     </div>
-
                                     <div className="form-group">
                                         <label for="userpassword">Password</label>
-                                        <input type="password" /* value={this.state.password} */ className="form-control" id="userpassword" placeholder="Enter password"  onChange={this.handleChange}/>
+                                        <input type="password" value={password} className="form-control" type="password" id="userpassword" placeholder="Enter password" onKeyDown={this.handleEnterKey}  onChange={this.handleChange}/>
                                     </div>
-                                   {/*  {error.length > 0 ? <p className="text-danger">{error}</p> : null} */}
+                                    {error.length > 0 ? <p className="text-danger">{error}</p> : null}
                                     <div className="custom-control custom-checkbox">
                                         <input type="checkbox" className="custom-control-input" id="customControlInline"/>
                                         <label className="custom-control-label" for="customControlInline">Remember me</label>
                                     </div>
 
                                     <div className="mt-3">
-                                        <button className="btn btn-primary btn-block waves-effect waves-light" type="submit" onClick={this.handleClick} >Log In</button>
+                                        <button className="btn btn-primary btn-block waves-effect waves-light" type="submit"  onClick={() => this.login()} >Log In</button>
                                     </div>
 
                                     <div className="mt-4 text-center">
@@ -127,7 +128,8 @@ class Login extends React.Component {
 </div>
     
     )
-}/* 
+}
+
 async componentDidUpdate(prevProps, prevState) {
     // check whether client has changed
     if (prevProps.isUserLogIn !== this.props.isUserLogIn) {
@@ -160,9 +162,16 @@ const mapStateToProps = state => {
         dispatch(errorlogin(user));
       } , setdata: user => {
         dispatch(setdata(user));
-      }, resetlogin: () => {
-        dispatch(resetlogin());
-      } 
-    };*/
+      }
+      
+    };
   }; 
-export default Login
+export default connect(mapStateToProps, mapDispatchToProps)(Login)
+
+
+
+
+
+
+
+

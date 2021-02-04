@@ -5,12 +5,11 @@ const LOGIN_USER_NAME = config.LOGIN_USER_NAME;
 
 const INITIAL_STATE = {
     user: null,
-    email: getCacheObject(LOGIN_USER_NAME),
+    username: getCacheObject(LOGIN_USER_NAME),
     error: '',
     loading: false,
     isUserLogIn: false,
-    reset_password_popup_msg: '',
-    reset_confirm_password_popup_msg: '',
+  
 }
 
 export default (state = INITIAL_STATE, action) => {
@@ -28,7 +27,7 @@ export default (state = INITIAL_STATE, action) => {
         case LoginActionTypes.SET_USER_INFO:
             return { ...state, ...INITIAL_STATE, user: action.payload, error: '' }
 
-        case LoginActionTypes.RESET_POPUP_ERROR_MSG:
+       /*  case LoginActionTypes.RESET_POPUP_ERROR_MSG:
             return { ...state, error: '', reset_password_popup_msg: action.payload }
 
         case LoginActionTypes.RESET_PASSWORD_SUCCESS:
@@ -40,7 +39,7 @@ export default (state = INITIAL_STATE, action) => {
             return { ...state, error: '', reset_password_popup_msg: action.payload }
 
         case LoginActionTypes.RESET_LOGIN_DETAILS:
-            return { ...state, ...INITIAL_STATE, email: getCacheObject(LOGIN_USER_NAME) }
+            return { ...state, ...INITIAL_STATE, username: getCacheObject(LOGIN_USER_NAME) }
 
 
         case LoginActionTypes.SET_LOGIN_DETAILS:
@@ -52,7 +51,7 @@ export default (state = INITIAL_STATE, action) => {
 
         case LoginActionTypes.RESEND_EMAIL_PASSWORD_SUCCESS:
             return { ...state, ...INITIAL_STATE, error: '', reset_confirm_password_popup_msg: action.payload }
-
+ */
         default: return state;
     }
 }

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Footer from "../commons/Footer";
 import { Link } from "react-router-dom";
-import {URL} from '../../components/helpers/Constants'
+import { URL } from "../../components/helpers/Constants";
 import Header from "../commons/Header";
 export class ClubUsers extends Component {
   render() {
@@ -10,9 +10,7 @@ export class ClubUsers extends Component {
         <div class="container-fluid">
           {/*     <!-- Begin page --> */}
           <div id="layout-wrapper">
-            <Header/>
-            {" "}
-            {/* <!-- ========== Left Sidebar Start ========== --> */}
+            <Header /> {/* <!-- ========== Left Sidebar Start ========== --> */}
             <div class="vertical-menu">
               <div class="h-100">
                 <div class="user-wid text-center py-4">
@@ -44,23 +42,31 @@ export class ClubUsers extends Component {
                     <li class="menu-title">Menu</li>
 
                     <li>
-                      <a /* href="index.html"  */class=" waves-effect">
+                      <a /* href="index.html"  */ class=" waves-effect">
                         <i class="mdi mdi-calendar-text"></i>
-                        <Link to={URL.NAV_HOME}><span>Dashboard</span></Link>   
+                        <Link to={URL.NAV_HOME}>
+                          <span>Dashboard</span>
+                        </Link>
                       </a>
                     </li>
 
                     <li>
-                      <a /* href="inde.html"  */class=" waves-effect">
+                      <a /* href="inde.html"  */ class=" waves-effect">
                         <i class="mdi mdi-calendar-text"></i>
-                        <Link to={URL.NAV_CLUBS}> <span >Clubs</span></Link>
+                        <Link to={URL.NAV_CLUBS}>
+                          {" "}
+                          <span>Clubs</span>
+                        </Link>
                       </a>
                     </li>
 
                     <li>
                       <a /* href="inde.html" */ class=" waves-effect">
                         <i class="mdi mdi-calendar-text"></i>
-                      <Link to={URL.NAV_USERS}> <span>Club Users</span></Link>
+                        <Link to={URL.NAV_USERS}>
+                          {" "}
+                          <span>Club Users</span>
+                        </Link>
                       </a>
                     </li>
 
@@ -121,17 +127,14 @@ export class ClubUsers extends Component {
                 </div>
                 {/*  <!-- end page title --> */}
 
-               
-                    
-                  {/*  <!-- end col --> */}
-                </div>
-                {/*  <!-- end row --> */}
-                <Footer />
+                {/*  <!-- end col --> */}
               </div>
+              {/*  <!-- end row --> */}
+              <Footer />
             </div>
           </div>
         </div>
-      
+      </div>
     );
   }
 }

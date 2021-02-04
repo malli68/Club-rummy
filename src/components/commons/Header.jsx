@@ -5,36 +5,36 @@ export class Header extends Component {
         return (
             <div>
                    <header id="page-topbar">
-              <div class="navbar-header">
-                <div class="container-fluid">
-                  <div class="float-right">
-                    <div class="dropdown d-inline-block d-lg-none ml-2">
+              <div className="navbar-header">
+                <div className="container-fluid">
+                  <div className="float-right">
+                    <div className="dropdown d-inline-block d-lg-none ml-2">
                       <button
                         type="button"
-                        class="btn header-item noti-icon waves-effect"
+                        className="btn header-item noti-icon waves-effect"
                         id="page-header-search-dropdown"
                         data-toggle="dropdown"
                         aria-haspopup="true"
                         aria-expanded="false"
                       >
-                        <i class="mdi mdi-magnify"></i>
+                        <i className="mdi mdi-magnify"></i>
                       </button>
                       <div
-                        class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
+                        className="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
                         aria-labelledby="page-header-search-dropdown"
                       >
-                        <form class="p-3">
-                          <div class="form-group m-0">
-                            <div class="input-group">
+                        <form className="p-3">
+                          <div className="form-group m-0">
+                            <div className="input-group">
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 placeholder="Search ..."
                                 aria-label="Recipient's username"
                               />
-                              <div class="input-group-append">
-                                <button class="btn btn-primary" type="submit">
-                                  <i class="mdi mdi-magnify"></i>
+                              <div className="input-group-append">
+                                <button className="btn btn-primary" type="submit">
+                                  <i className="mdi mdi-magnify"></i>
                                 </button>
                               </div>
                             </div>
@@ -43,39 +43,39 @@ export class Header extends Component {
                       </div>
                     </div>
 
-                    <div class="dropdown d-none d-lg-inline-block ml-1">
+                    <div className="dropdown d-none d-lg-inline-block ml-1">
                       <button
                         type="button"
-                        class="btn header-item noti-icon waves-effect"
+                        className="btn header-item noti-icon waves-effect"
                         data-toggle="fullscreen"
                       >
-                        <i class="mdi mdi-fullscreen"></i>
+                        <i className="mdi mdi-fullscreen"></i>
                       </button>
                     </div>
 
-                    <div class="dropdown d-inline-block">
+                    <div className="dropdown d-inline-block">
                       <button
                         type="button"
-                        class="btn header-item noti-icon waves-effect"
+                        className="btn header-item noti-icon waves-effect"
                         id="page-header-notifications-dropdown"
                         data-toggle="dropdown"
                         aria-haspopup="true"
                         aria-expanded="false"
                       >
-                        <i class="mdi mdi-bell-outline"></i>
-                        <span class="badge badge-danger badge-pill">3</span>
+                        <i className="mdi mdi-bell-outline"></i>
+                        <span className="badge badge-danger badge-pill">3</span>
                       </button>
                       <div
-                        class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
+                        className="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
                         aria-labelledby="page-header-notifications-dropdown"
                       >
-                        <div class="p-3">
-                          <div class="row align-items-center">
-                            <div class="col">
-                              <h6 class="m-0"> Notifications </h6>
+                        <div className="p-3">
+                          <div className="row align-items-center">
+                            <div className="col">
+                              <h6 className="m-0"> Notifications </h6>
                             </div>
-                            <div class="col-auto">
-                              <a href="#!" class="small">
+                            <div className="col-auto">
+                              <a href="#!" className="small">
                                 {" "}
                                 View All
                               </a>
@@ -83,63 +83,63 @@ export class Header extends Component {
                           </div>
                         </div>
                         <div data-simplebar style={{ maxHeight: "230px" }}>
-                          <a href="" class="text-reset notification-item">
-                            <div class="media">
-                              <div class="avatar-xs mr-3">
-                                <span class="avatar-title bg-primary rounded-circle font-size-16">
-                                  <i class="bx bx-cart"></i>
+                          <a href="" className="text-reset notification-item">
+                            <div className="media">
+                              <div className="avatar-xs mr-3">
+                                <span className="avatar-title bg-primary rounded-circle font-size-16">
+                                  <i className="bx bx-cart"></i>
                                 </span>
                               </div>
-                              <div class="media-body">
-                                <h6 class="mt-0 mb-1">Your order is placed</h6>
-                                <div class="font-size-12 text-muted">
-                                  <p class="mb-1">
+                              <div className="media-body">
+                                <h6 className="mt-0 mb-1">Your order is placed</h6>
+                                <div className="font-size-12 text-muted">
+                                  <p className="mb-1">
                                     If several languages coalesce the grammar
                                   </p>
-                                  <p class="mb-0">
-                                    <i class="mdi mdi-clock-outline"></i> 3 min
+                                  <p className="mb-0">
+                                    <i className="mdi mdi-clock-outline"></i> 3 min
                                     ago
                                   </p>
                                 </div>
                               </div>
                             </div>
                           </a>
-                          <a href="" class="text-reset notification-item">
-                            <div class="media">
+                          <a href="" className="text-reset notification-item">
+                            <div className="media">
                               <img
                                 src="assets/images/users/avatar-3.jpg"
-                                class="mr-3 rounded-circle avatar-xs"
+                                className="mr-3 rounded-circle avatar-xs"
                                 alt="user-pic"
                               />
-                              <div class="media-body">
-                                <h6 class="mt-0 mb-1">James Lemire</h6>
-                                <div class="font-size-12 text-muted">
-                                  <p class="mb-1">
+                              <div className="media-body">
+                                <h6 className="mt-0 mb-1">James Lemire</h6>
+                                <div className="font-size-12 text-muted">
+                                  <p className="mb-1">
                                     It will seem like simplified English.
                                   </p>
-                                  <p class="mb-0">
-                                    <i class="mdi mdi-clock-outline"></i> 1
+                                  <p className="mb-0">
+                                    <i className="mdi mdi-clock-outline"></i> 1
                                     hours ago
                                   </p>
                                 </div>
                               </div>
                             </div>
                           </a>
-                          <a href="" class="text-reset notification-item">
-                            <div class="media">
-                              <div class="avatar-xs mr-3">
-                                <span class="avatar-title bg-success rounded-circle font-size-16">
-                                  <i class="bx bx-badge-check"></i>
+                          <a href="" className="text-reset notification-item">
+                            <div className="media">
+                              <div className="avatar-xs mr-3">
+                                <span className="avatar-title bg-success rounded-circle font-size-16">
+                                  <i className="bx bx-badge-check"></i>
                                 </span>
                               </div>
-                              <div class="media-body">
-                                <h6 class="mt-0 mb-1">Your item is shipped</h6>
-                                <div class="font-size-12 text-muted">
-                                  <p class="mb-1">
+                              <div className="media-body">
+                                <h6 className="mt-0 mb-1">Your item is shipped</h6>
+                                <div className="font-size-12 text-muted">
+                                  <p className="mb-1">
                                     If several languages coalesce the grammar
                                   </p>
-                                  <p class="mb-0">
-                                    <i class="mdi mdi-clock-outline"></i> 3 min
+                                  <p className="mb-0">
+                                    <i className="mdi mdi-clock-outline"></i> 3 min
                                     ago
                                   </p>
                                 </div>
@@ -147,22 +147,22 @@ export class Header extends Component {
                             </div>
                           </a>
 
-                          <a href="" class="text-reset notification-item">
-                            <div class="media">
+                          <a href="" className="text-reset notification-item">
+                            <div className="media">
                               <img
                                 src="assets/images/users/avatar-4.jpg"
-                                class="mr-3 rounded-circle avatar-xs"
+                                className="mr-3 rounded-circle avatar-xs"
                                 alt="user-pic"
                               />
-                              <div class="media-body">
-                                <h6 class="mt-0 mb-1">Salena Layfield</h6>
-                                <div class="font-size-12 text-muted">
-                                  <p class="mb-1">
+                              <div className="media-body">
+                                <h6 className="mt-0 mb-1">Salena Layfield</h6>
+                                <div className="font-size-12 text-muted">
+                                  <p className="mb-1">
                                     As a skeptical Cambridge friend of mine
                                     occidental.
                                   </p>
-                                  <p class="mb-0">
-                                    <i class="mdi mdi-clock-outline"></i> 1
+                                  <p className="mb-0">
+                                    <i className="mdi mdi-clock-outline"></i> 1
                                     hours ago
                                   </p>
                                 </div>
@@ -170,61 +170,61 @@ export class Header extends Component {
                             </div>
                           </a>
                         </div>
-                        <div class="p-2 border-top">
+                        <div className="p-2 border-top">
                           <a
-                            class="btn btn-sm btn-link font-size-14 btn-block text-center"
+                            className="btn btn-sm btn-link font-size-14 btn-block text-center"
                             href="javascript:void(0)"
                           >
-                            <i class="mdi mdi-arrow-right-circle mr-1"></i> View
+                            <i className="mdi mdi-arrow-right-circle mr-1"></i> View
                             More..
                           </a>
                         </div>
                       </div>
                     </div>
 
-                    <div class="dropdown d-inline-block">
+                    <div className="dropdown d-inline-block">
                       <button
                         type="button"
-                        class="btn header-item waves-effect"
+                        className="btn header-item waves-effect"
                         id="page-header-user-dropdown"
                         data-toggle="dropdown"
                         aria-haspopup="true"
                         aria-expanded="false"
                       >
                         <img
-                          class="rounded-circle header-profile-user"
+                          className="rounded-circle header-profile-user"
                           src="assets/images/users/avatar-2.jpg"
                           alt="Header Avatar"
                         />
-                        <span class="d-none d-xl-inline-block ml-1">
+                        <span className="d-none d-xl-inline-block ml-1">
                           Patrick
                         </span>
-                        <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                        <i className="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                       </button>
-                      <div class="dropdown-menu dropdown-menu-right">
+                      <div className="dropdown-menu dropdown-menu-right">
                         {/*        <!-- item--> */}
-                        <a class="dropdown-item" href="#">
-                          <i class="bx bx-user font-size-16 align-middle mr-1"></i>{" "}
+                        <a className="dropdown-item" href="#">
+                          <i className="bx bx-user font-size-16 align-middle mr-1"></i>{" "}
                           Profile
                         </a>
-                        <a class="dropdown-item" href="#">
-                          <i class="bx bx-wallet font-size-16 align-middle mr-1"></i>{" "}
+                        <a className="dropdown-item" href="#">
+                          <i className="bx bx-wallet font-size-16 align-middle mr-1"></i>{" "}
                           My Wallet
                         </a>
-                        <a class="dropdown-item d-block" href="#">
-                          <span class="badge badge-success float-right">
+                        <a className="dropdown-item d-block" href="#">
+                          <span className="badge badge-success float-right">
                             11
                           </span>
-                          <i class="bx bx-wrench font-size-16 align-middle mr-1"></i>{" "}
+                          <i className="bx bx-wrench font-size-16 align-middle mr-1"></i>{" "}
                           Settings
                         </a>
-                        <a class="dropdown-item" href="#">
-                          <i class="bx bx-lock-open font-size-16 align-middle mr-1"></i>{" "}
+                        <a className="dropdown-item" href="#">
+                          <i className="bx bx-lock-open font-size-16 align-middle mr-1"></i>{" "}
                           Lock screen
                         </a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item text-danger" href="#">
-                          <i class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i>{" "}
+                        <div className="dropdown-divider"></div>
+                        <a className="dropdown-item text-danger" href="#">
+                          <i className="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i>{" "}
                           Logout
                         </a>
                       </div>
@@ -232,16 +232,16 @@ export class Header extends Component {
                   </div>
                   <div>
                     {/* <!-- LOGO --> */}
-                    <div class="navbar-brand-box">
-                      <a href="index.html" class="logo logo-dark">
-                        <span class="logo-sm">
+                    <div className="navbar-brand-box">
+                      <a href="index.html" className="logo logo-dark">
+                        <span className="logo-sm">
                           <img
                             src="assets/images/logo-sm.pn"
                             alt=""
                             height="20"
                           />
                         </span>
-                        <span class="logo-lg">
+                        <span className="logo-lg">
                           <img
                             src="assets/images/logo-dark.png"
                             alt=""
@@ -250,47 +250,47 @@ export class Header extends Component {
                         </span>
                       </a>
 
-                      <a href="index.html" class="logo logo-light">
-                        <span class="logo-sm">
+                      <a href="index.html" className="logo logo-light">
+                        <span className="logo-sm">
                           <img
                             src="assets/images/logo-sm.png"
                             alt=""
                             height="20"
                           />
                         </span>
-                        <span class="logo-lg d-flex">
+                        <span className="logo-lg d-flex">
                           {/*  <!-- <img src="assets/images/logo-light.png" alt="" height="19"> --> */}
-                          <h4 class="text-light pt-4"><a href="/dashboard" style={{color:"white"}}>ClubRummy</a></h4>
+                          <h4 className="text-light pt-4"><a href="/dashboard" style={{color:"white"}}>ClubRummy</a></h4>
                         </span>
                       </a>
                     </div>
 
                     <button
                       type="button"
-                      class="btn btn-sm px-3 font-size-16 header-item toggle-btn waves-effect"
+                      className="btn btn-sm px-3 font-size-16 header-item toggle-btn waves-effect"
                       id="vertical-menu-btn"
                     >
-                      <i class="fa fa-fw fa-bars"></i>
+                      <i className="fa fa-fw fa-bars"></i>
                     </button>
 
-                    <div class="dropdown dropdown-mega d-none d-lg-inline-block ml-2">
+                    <div className="dropdown dropdown-mega d-none d-lg-inline-block ml-2">
                       <button
                         type="button"
-                        class="btn header-item waves-effect"
+                        className="btn header-item waves-effect"
                         data-toggle="dropdown"
                         aria-haspopup="false"
                         aria-expanded="false"
                       >
                         Mega Menu
-                        <i class="mdi mdi-chevron-down"></i>
+                        <i className="mdi mdi-chevron-down"></i>
                       </button>
-                      <div class="dropdown-menu dropdown-megamenu">
-                        <div class="row">
-                          <div class="col-sm-6">
-                            <div class="row">
-                              <div class="col-md-4">
-                                <h5 class="font-size-14 mt-0">UI Components</h5>
-                                <ul class="list-unstyled megamenu-list">
+                      <div className="dropdown-menu dropdown-megamenu">
+                        <div className="row">
+                          <div className="col-sm-6">
+                            <div className="row">
+                              <div className="col-md-4">
+                                <h5 className="font-size-14 mt-0">UI Components</h5>
+                                <ul className="list-unstyled megamenu-list">
                                   <li>
                                     <a href="javascript:void(0);">Lightbox</a>
                                   </li>
@@ -319,9 +319,9 @@ export class Header extends Component {
                                 </ul>
                               </div>
 
-                              <div class="col-md-4">
-                                <h5 class="font-size-14 mt-0">Applications</h5>
-                                <ul class="list-unstyled megamenu-list">
+                              <div className="col-md-4">
+                                <h5 className="font-size-14 mt-0">Applications</h5>
+                                <ul className="list-unstyled megamenu-list">
                                   <li>
                                     <a href="javascript:void(0);">Ecommerce</a>
                                   </li>
@@ -343,9 +343,9 @@ export class Header extends Component {
                                 </ul>
                               </div>
 
-                              <div class="col-md-4">
-                                <h5 class="font-size-14 mt-0">Extra Pages</h5>
-                                <ul class="list-unstyled megamenu-list">
+                              <div className="col-md-4">
+                                <h5 className="font-size-14 mt-0">Extra Pages</h5>
+                                <ul className="list-unstyled megamenu-list">
                                   <li>
                                     <a href="javascript:void(0);">
                                       Light Sidebar
@@ -381,14 +381,14 @@ export class Header extends Component {
                               </div>
                             </div>
                           </div>
-                          <div class="col-sm-6">
-                            <div class="row">
-                              <div class="col-sm-6">
-                                <h5 class="font-size-14 mt-0">Components</h5>
-                                <div class="px-lg-2">
-                                  <div class="row no-gutters">
-                                    <div class="col">
-                                      <a class="dropdown-icon-item" href="#">
+                          <div className="col-sm-6">
+                            <div className="row">
+                              <div className="col-sm-6">
+                                <h5 className="font-size-14 mt-0">Components</h5>
+                                <div className="px-lg-2">
+                                  <div className="row no-gutters">
+                                    <div className="col">
+                                      <a className="dropdown-icon-item" href="#">
                                         <img
                                           src="assets/images/brands/github.png"
                                           alt="Github"
@@ -396,8 +396,8 @@ export class Header extends Component {
                                         <span>GitHub</span>
                                       </a>
                                     </div>
-                                    <div class="col">
-                                      <a class="dropdown-icon-item" href="#">
+                                    <div className="col">
+                                      <a className="dropdown-icon-item" href="#">
                                         <img
                                           src="assets/images/brands/bitbucket.png"
                                           alt="bitbucket"
@@ -405,8 +405,8 @@ export class Header extends Component {
                                         <span>Bitbucket</span>
                                       </a>
                                     </div>
-                                    <div class="col">
-                                      <a class="dropdown-icon-item" href="#">
+                                    <div className="col">
+                                      <a className="dropdown-icon-item" href="#">
                                         <img
                                           src="assets/images/brands/dribbble.png"
                                           alt="dribbble"
@@ -416,9 +416,9 @@ export class Header extends Component {
                                     </div>
                                   </div>
 
-                                  <div class="row no-gutters">
-                                    <div class="col">
-                                      <a class="dropdown-icon-item" href="#">
+                                  <div className="row no-gutters">
+                                    <div className="col">
+                                      <a className="dropdown-icon-item" href="#">
                                         <img
                                           src="assets/images/brands/dropbox.png"
                                           alt="dropbox"
@@ -426,8 +426,8 @@ export class Header extends Component {
                                         <span>Dropbox</span>
                                       </a>
                                     </div>
-                                    <div class="col">
-                                      <a class="dropdown-icon-item" href="#">
+                                    <div className="col">
+                                      <a className="dropdown-icon-item" href="#">
                                         <img
                                           src="assets/images/brands/mail_chimp.png"
                                           alt="mail_chimp"
@@ -435,8 +435,8 @@ export class Header extends Component {
                                         <span>Mail Chimp</span>
                                       </a>
                                     </div>
-                                    <div class="col">
-                                      <a class="dropdown-icon-item" href="#">
+                                    <div className="col">
+                                      <a className="dropdown-icon-item" href="#">
                                         <img
                                           src="assets/images/brands/slack.png"
                                           alt="slack"
@@ -448,25 +448,25 @@ export class Header extends Component {
                                 </div>
                               </div>
 
-                              <div class="col-sm-6">
+                              <div className="col-sm-6">
                                 <div>
                                   <div
-                                    class="card text-white mb-0 overflow-hidden text-white-50"
+                                    className="card text-white mb-0 overflow-hidden text-white-50"
                                     style={{
                                       backgroundImage:
                                         "assets/images/megamenu-img.png",
                                       backgroundSize: "cover",
                                     }}
                                   >
-                                    <div class="card-img-overlay"></div>
-                                    <div class="card-body">
-                                      <div class="row">
-                                        <div class="col-xl-6">
-                                          <h4 class="text-white mb-3">Sale</h4>
+                                    <div className="card-img-overlay"></div>
+                                    <div className="card-body">
+                                      <div className="row">
+                                        <div className="col-xl-6">
+                                          <h4 className="text-white mb-3">Sale</h4>
 
-                                          <h5 class="text-white-50">
+                                          <h5 className="text-white-50">
                                             Up to{" "}
-                                            <span class="font-size-24 text-white">
+                                            <span className="font-size-24 text-white">
                                               50 %
                                             </span>{" "}
                                             Off
@@ -474,10 +474,10 @@ export class Header extends Component {
                                           <p>
                                             At vero eos accusamus et iusto odio.
                                           </p>
-                                          <div class="mb-4">
+                                          <div className="mb-4">
                                             <a
                                               href="#"
-                                              class="btn btn-success btn-sm"
+                                              className="btn btn-success btn-sm"
                                             >
                                               View more
                                             </a>
