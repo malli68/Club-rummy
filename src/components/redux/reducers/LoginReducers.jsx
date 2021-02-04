@@ -27,7 +27,7 @@ export default (state = INITIAL_STATE, action) => {
         case LoginActionTypes.SET_USER_INFO:
             return { ...state, ...INITIAL_STATE, user: action.payload, error: '' }
 
-       /*  case LoginActionTypes.RESET_POPUP_ERROR_MSG:
+       case LoginActionTypes.RESET_POPUP_ERROR_MSG:
             return { ...state, error: '', reset_password_popup_msg: action.payload }
 
         case LoginActionTypes.RESET_PASSWORD_SUCCESS:
@@ -51,7 +51,7 @@ export default (state = INITIAL_STATE, action) => {
 
         case LoginActionTypes.RESEND_EMAIL_PASSWORD_SUCCESS:
             return { ...state, ...INITIAL_STATE, error: '', reset_confirm_password_popup_msg: action.payload }
- */
+
         default: return state;
     }
 }

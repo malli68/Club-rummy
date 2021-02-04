@@ -3,10 +3,11 @@ import reactDom from 'react-dom'
 import '../login/login.css'
 import { useHistory } from 'react-router-dom';
 import config from '../../config'
-import { connect } from 'react-redux';
 import {removeSession} from '../helpers/globalHelpers/GlobalHelperFunctions'
 import { setCacheObject, getCacheObject } from '../helpers/globalHelpers/GlobalHelperFunctions';
+import { connect } from 'react-redux';
 import { login, errorlogin, setdata, resetlogin } from '../redux/actions/LoginActions'
+import { URL } from '../helpers/Constants';
 import {validateEmail} from '../helpers/globalHelpers/Utils'
 const LOGIN_USER_NAME = config.LOGIN_USER_NAME;
 const SESSION_KEY_NAME = config.SESSION_KEY_NAME;
@@ -15,7 +16,7 @@ class Login extends React.Component {
      constructor(props) {
         super(props)
         // this.handleChange = this.handleChange.bind(this);
-       /*  this.props.resetlogin(); */
+      //  this.props.resetlogin();
        this.state = {
           login: false,
           password: "",
@@ -31,20 +32,19 @@ class Login extends React.Component {
 
       
 
-  async login() {
+   login() {
     const { email } = this.props;
     if (email == "" || this.state.password == "") {
       this.props.onErrorLogin('Please Enter email and Password');
       return false;
-    } else if (!validateEmail(email)) {
-      this.props.onErrorLogin('Enter valid email.');
-      return false;
-    }
+    } 
+
+    console.log("hiii>>>>", email, this.state.password)
     let dataObject = {
-      email: email,
+      username: email,
       password: this.state.password
     };
-    this.props.onUserLogin(dataObject);
+  this.props.onUserLogin(dataObject);
   }
 
   handleEnterKey = (e) => {
@@ -58,7 +58,7 @@ class Login extends React.Component {
     if (e.target.name == "email") {
       this.props.setdata(data)
     } else if (e.target.name == "password") {
-      this.setState({ [e.target.name]: e.target.value })
+      this.setState({ password: e.target.value })
     }
   }
 
@@ -66,6 +66,7 @@ class Login extends React.Component {
     render(){
     
         const { loading, isUserLogIn, error, email } = this.props;
+        
         const {password} = this.state.password
     return (
         <div>
@@ -87,17 +88,17 @@ class Login extends React.Component {
                         </div>
                         <div className="card-body pt-5">
                             <div className="p-2">
-                                <form className="form-horizontal" action="index.html">
+                      
 
                                     <div className="form-group">
-                                        <label for="email">email</label>
-                                        <input type="text" className="form-control"  value={email} type="text" id="email" placeholder="Enter email" onChange={this.handleChange} />
+                                        <label for="email">Username</label>
+                                        <input type="text" className="form-control"  value={email} name="email" type="text" id="email" placeholder="Enter email" onChange={this.handleChange} />
                                     </div>
                                     <div className="form-group">
                                         <label for="userpassword">Password</label>
-                                        <input type="password" value={password} className="form-control" type="password" id="userpassword" placeholder="Enter password" onKeyDown={this.handleEnterKey}  onChange={this.handleChange}/>
+                                        <input type="password" value={password} name="password" className="form-control" type="password" id="userpassword" placeholder="Enter password" onKeyDown={this.handleEnterKey}  onChange={this.handleChange}/>
                                     </div>
-                                    {error.length > 0 ? <p className="text-danger">{error}</p> : null}
+                                {/*     {error.length > 0 ? <p className="text-danger">{error}</p> : null} */}
                                     <div className="custom-control custom-checkbox">
                                         <input type="checkbox" className="custom-control-input" id="customControlInline"/>
                                         <label className="custom-control-label" for="customControlInline">Remember me</label>
@@ -110,7 +111,7 @@ class Login extends React.Component {
                                     <div className="mt-4 text-center">
                                         <a href="pages-recoverpw.html" className="text-muted"><i className="mdi mdi-lock mr-1"></i> Forgot your password?</a>
                                     </div>
-                                </form>
+                           
                             </div>
 
                         </div>
@@ -136,7 +137,7 @@ async componentDidUpdate(prevProps, prevState) {
       if (this.props.isUserLogIn) {
         await setCacheObject(LOGIN_USER_NAME, this.props.user.user.email);
         await setCacheObject(SESSION_KEY_NAME, this.props.user);
-        this.props.history.push(URL.REDIRECT_HOME);
+        this.props.history.push(URL._HOME);
       }
     }
   }
@@ -162,6 +163,8 @@ const mapStateToProps = state => {
         dispatch(errorlogin(user));
       } , setdata: user => {
         dispatch(setdata(user));
+      },resetlogin: () => {
+        dispatch(resetlogin());
       }
       
     };

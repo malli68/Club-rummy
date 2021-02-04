@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Route, Switch, Redirect, BrowserRouter as Router } from "react-router-dom";
 import Clubs from '../clubs/Clubs';
 import ClubUsers from '../clubUsers/ClubUsers';

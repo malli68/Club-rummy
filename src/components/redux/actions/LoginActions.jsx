@@ -24,10 +24,13 @@ export const loginUser = (user) => {
 
 export const login = (user) => {
     return dispatch => {
+        console.log(">>",ServiceUrls.LOGIN, user);
+     
+    
         dispatch(loginrequeststarted());
-        console.log(ServiceUrls.LOGIN, user)
         axios.post(ServiceUrls.LOGIN, user)
             .then(res => {
+                console.log(">>", res);
                 let resCode = res.data.status;
                 if (resCode === 200) {
                     dispatch(loginrequestSuccess(res.data.response));
@@ -54,11 +57,17 @@ export const errorlogin = (msg) => {
         dispatch(loginrequestFailure(msg));
     };
 }
+export const resetlogin = () => {
+    return dispatch => {
+        dispatch(setresetlogininfo());
+    };
+}
+
 const setdataToredux = (data) => ({
     type: LoginActionTypes.SET_LOGIN_DETAILS,
     payload: data
 });
-
+console.log(setdataToredux.data)
 const loginrequeststarted = () => ({
     type: LoginActionTypes.ON_LOGIN_REQUEST_START
 });
@@ -70,5 +79,9 @@ const loginrequestFailure = (data) => ({
     type: LoginActionTypes.ON_LOGIN_REQUEST_FAIL,
     payload: data
 });
+const setresetlogininfo = () => ({
+    type: LoginActionTypes.RESET_PASSWORD_FAIL,
+});
+
 
 
