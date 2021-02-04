@@ -3,7 +3,7 @@ import { decryptData, encryptData } from '../globalHelpers/EncryprDecrypt';
 import config from "../../../config";
 const SESSION_KEY_NAME = config.SESSION_KEY_NAME;
 
-export function checkSession() {
+  export function checkSession() {
   let user = getCacheObject(SESSION_KEY_NAME);
   if (user) {
     return true;

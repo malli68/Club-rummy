@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Switch, Redirect, BrowserRouter as Router } from "react-router-dom";
 import Clubs from '../clubs/Clubs';
-import ClubUsers from '../clubUsers/ClubUsers';
+import ClubUsers from '../../components/clubUsers/ClubUsers';
 import Dashboard from '../dashboard/Dashboard'
 // import Error from '../login/Error';
 import Login from '../login/Login'
@@ -15,9 +15,9 @@ export default class AppRouter extends React.Component {
                 <Router>
                     <Switch>
                     <Route exact path='/' component={Login}></Route>
-                    <ProtectedRoute exact path='/dashboard' component={Dashboard}></ProtectedRoute>
-                    <ProtectedRoute exact path='/users' component={ClubUsers}></ProtectedRoute>
-                    <ProtectedRoute exact path='/clubusers' component={Clubs}></ProtectedRoute>
+                    <ProtectedRoute exact path='/dashboard' component={Dashboard}></ProtectedRoute>                   
+                    <ProtectedRoute exact path='/clubusers' component={ClubUsers}></ProtectedRoute>
+                    <ProtectedRoute exact path='/clubs' component={Clubs}></ProtectedRoute>
                     <Route path="/*"> <Redirect to="/" /></Route>
                     </Switch>
                 </Router>

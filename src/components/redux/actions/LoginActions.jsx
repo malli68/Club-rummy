@@ -30,8 +30,10 @@ export const login = (user) => {
         dispatch(loginrequeststarted());
         axios.post(ServiceUrls.LOGIN, user)
             .then(res => {
+                //changes
                 console.log(">>", res);
-                let resCode = res.data.status;
+                let resCode = res.data.code;
+                console.log(res.data)
                 if (resCode === 200) {
                     dispatch(loginrequestSuccess(res.data.response));
                 } else {
@@ -82,6 +84,5 @@ const loginrequestFailure = (data) => ({
 const setresetlogininfo = () => ({
     type: LoginActionTypes.RESET_PASSWORD_FAIL,
 });
-
 
 

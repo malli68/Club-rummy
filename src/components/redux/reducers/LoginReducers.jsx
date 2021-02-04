@@ -18,6 +18,7 @@ export default (state = INITIAL_STATE, action) => {
             return { ...state, loading: true, isUserLogIn: false }
 
         case LoginActionTypes.ON_LOGIN_REQUEST_SUCCESS:
+            console.log("hiiiiiiiiiii")
             return { ...state, loading: false, user: action.payload, isUserLogIn: true }
 
         case LoginActionTypes.ON_LOGIN_REQUEST_FAIL:

@@ -20,6 +20,7 @@ class Login extends React.Component {
        this.state = {
           login: false,
           password: "",
+
           error: false
         }
       }
@@ -133,18 +134,20 @@ class Login extends React.Component {
 
 async componentDidUpdate(prevProps, prevState) {
     // check whether client has changed
+    
     if (prevProps.isUserLogIn !== this.props.isUserLogIn) {
       if (this.props.isUserLogIn) {
-        await setCacheObject(LOGIN_USER_NAME, this.props.user.user.email);
+        console.log(this.props.user)
+        await setCacheObject(LOGIN_USER_NAME, this.props.user.email);
         await setCacheObject(SESSION_KEY_NAME, this.props.user);
-        this.props.history.push(URL._HOME);
+        this.props.history.push(URL.NAV_HOME);
       }
     }
   }
 }
 const mapStateToProps = state => {
     const { error, loading, user, isUserLogIn, email } = state.auth;
-    console.log("email>>>>", email);
+    console.log("email>>>>", isUserLogIn);
     return {
       error,
       loading,
